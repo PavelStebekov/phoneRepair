@@ -1,15 +1,22 @@
 // main: ../style.less
 
 .header{
-    height: 200px;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 2;
+    padding-right: 25px;
 }
 .header__logo {
-    flex: 0 0 240px;
+    flex: 0 0 200px;
+    & img {
+        width: 100%;
+    }
 }
 .menu {
     flex: 1 1 auto;

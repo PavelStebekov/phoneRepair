@@ -1,35 +1,47 @@
 // main: ../style.less
 
 .hero {
-    height: 1000px;
+    height: 100vh;
     background-color: @bgdark;
 }
-.hero__content {
-    width: 654px;
-    margin: 90px auto 0 0;
+.hero__container {
     position: relative;
-    z-index: 2;
+    padding-right: 0;
+    max-width: 1890px;
+    height: 100vh;
+}
+.main {
+    display: flex;
+    height: 100vh;
+}
+.hero__content {
+    flex: 0 0 39%;
+    margin-top: 31vh;
+}
+.contain {
+    width: 92%;
 }
 .hero__title {
     font-size: 64px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 80px;
+    margin-bottom: 8vh;
     & span {
         color: @accentColor;
     }
 }
 .hero__text {
     font-size: 40px;
+    line-height: 1.1;
     color: #fff;
-    margin-bottom: 100px;
+    margin-bottom: 10vh;
 }
 .hero__btn {
     display: flex;
     justify-content: center;
 }
 .btn--no-bg {
-    border: 4px solid @accentColor;
+    border: 3px solid @accentColor;
     color: #fff;
     transition: .2s ease;
     &:hover{

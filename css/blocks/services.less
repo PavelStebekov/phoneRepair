@@ -2,41 +2,32 @@
 
 .services {
     background-color: @bgrey;
+    padding-top: 70px;
 }
 .services__slider {
-    width: 100%;
-    height: 1000px;
-    padding: 0 70px;
+    width: 90%;
+    height: 700px;
+    padding: 0 50px;
+    margin: 0 auto;
 }
-.swiper-button-prev {
-}
+.swiper-button-prev,
 .swiper-button-next {
+    color: #9e9494;
 }
 .swiper-slide-active {
     & .slide__wrapper{
         transform: scale(1.2);
     }
-    // & .slide__wrapper{
-    //     width: 509px;
-    //     height: 693px;
-    //     transition: .3s ease;
-    //     padding: 144px 35px 90px;
-    //     & .slide__img {
-    //         width: 215px;
-    //         height: 166px;
-    //     }
-    //     & .slide__title {
-    //         font-weight: 600;
-    //         font-size: 34px;
-    //         margin-bottom: 22px;
-    //     }
-    //     & .slide__text {
-    //         font-size: 24px;
-    //     }
-    // }
 }
 
-
+.services__title {
+    margin-bottom: 10px;
+    & h2 {
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+}
 .services__slider-wrapper {
     align-items: center;
 }
@@ -46,9 +37,9 @@
     justify-content: center;
 }
 .slide__wrapper {
-    width: 435px;
-    height: 586px;
-    padding: 144px 44px 90px;
+    width: 400px;
+    height: 500px;
+    padding: 30px;
     border-radius: 15px;
     background-color: #fff;
     text-align: center;
@@ -56,21 +47,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .slide__img {
-    width: 165px;
-    height: 127px;
-    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 60%;
     transition: .2s ease;
+    & img {
+        object-position: center;
+    }
 }
 .slide__title {
+    flex: 0 0 8%;
     font-weight: 600;
-    font-size: 32px;
-    margin-bottom: 22px;
+    font-size: 28px;
+    margin-bottom: 15px;
     transition: .2s ease;
 }
 .slide__text {
+    flex: 0 0 30%;
     font-size: 20px;
+    line-height: 1.1;
     transition: .2s ease;
 }
