@@ -1,0 +1,51 @@
+// main: ../style.less
+
+.header{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+.header__logo {
+    flex: 0 0 240px;
+}
+.menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+.menu__list {
+    display: flex;
+    flex: 0 1 51.7%;
+    justify-content: space-between;
+}
+.menu__item {
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+.menu__link {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .2s ease;
+    &:hover{
+        color: @accentColor;
+    }
+}
+.header__btn {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.btn--primary {
+    background-color: @accentColor;
+    color: #fff;
+    transition: .2s ease;
+    &:hover{
+        background-color: darken(@accentColor, 5%);
+    }
+}
