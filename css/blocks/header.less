@@ -10,10 +10,10 @@
     left: 0;
     right: 0;
     z-index: 2;
-    padding-right: 25px;
+    padding: 0 40px 0 30px;
 }
 .header__logo {
-    flex: 0 0 200px;
+    width: 236px;
     & img {
         width: 100%;
     }
@@ -23,28 +23,21 @@
     display: flex;
     justify-content: center;
 }
-.menu__list {
-    display: flex;
-    flex: 0 1 51.7%;
-    justify-content: space-between;
-}
-.menu__item {
-    &:not(:last-child) {
-        margin-right: 50px;
-    }
-}
 .menu__link {
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
     transition: .2s ease;
+    &:not(:last-child) {
+        margin-right: 100px;
+    }
     &:hover{
         color: @accentColor;
     }
 }
 .header__btn {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     display: flex;
     justify-content: center;
 }
@@ -55,4 +48,9 @@
     &:hover{
         background-color: darken(@accentColor, 5%);
     }
+}
+.btn--sm {
+    width: 249px;
+    padding: 22px 47px;
+    font-size: 16px;
 }

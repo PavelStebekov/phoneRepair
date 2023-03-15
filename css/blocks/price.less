@@ -1,0 +1,82 @@
+// main: ../style.less
+
+.price__container {
+    padding: 86px 357px 33px;
+}
+.price__title {
+    margin-bottom: 71px;
+    & h2 {
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+}
+.accordion {
+    border-top: 3px solid @accentColor;
+    border-bottom: 3px solid @accentColor;
+    margin-bottom: 61px;
+}
+.accordion__item {
+    padding: 30px 50px;
+    &:not(:last-child){
+        border-bottom: 3px solid @accentColor;
+    }
+    &-active {
+        & .accordion__trigger {
+            margin-bottom: 50px;
+            & .trigger {
+                &::before {
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    transform: rotate(135deg);
+                }
+            }
+        }
+        & .accordion__text {
+            display: block;
+        }
+    }
+}
+.accordion__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.trigger {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    position: relative;
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 35px;
+        height: 4px;
+        background-color: #000;
+        transition: .2s ease;
+    }
+    &::after {
+        transform: rotate(90deg);
+    }
+}
+.accordion__title {
+    font-size: 24px;
+}
+.accordion__text {
+    font-size: 20px;
+    display: none;
+}
+.price__text {
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.price__btn {
+    & .btn {
+        margin: 0 auto;
+    }
+}

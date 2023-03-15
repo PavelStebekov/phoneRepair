@@ -1,0 +1,44 @@
+// main: ../style.less
+
+.sale__wrapper {
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.sale__container {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 188px;
+    padding-bottom: 57px;
+}
+.sale__offer {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.sale__text {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 82px;
+}
+.sale__btn {
+    & .btn {
+        margin: 0 auto;
+    }
+}
+.btn--secondary {
+    color: @accentColor;
+    background-color: #fff;
+    transition: .2s ease;
+    &:hover{
+        color: #fff;
+        background-color: @accentColor;
+    }
+}

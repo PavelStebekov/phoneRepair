@@ -1,47 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Ремонт цифровой техники</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
 </head>
 <body>
     
 
     <!-- /hero -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero__container container">
             <!-- header -->
             <header class="header">
                 <div class="header__logo">
-                    <a href="#" class="header__link">
-                        <img src="img/logo.png" alt="logo">
+                    <a href="#hero" class="header__link">
+                        <img src="img/logo.svg" alt="лого">
                     </a>
                 </div>
                 <nav class="header__menu menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">услуги</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">цены</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">отзывы</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">контакты</a>
-                        </li>
-                    </ul>
+                    <a href="#service" class="menu__link">услуги</a>
+                    <a href="#price" class="menu__link">цены</a>
+                    <a href="#reviews" class="menu__link">отзывы</a>
+                    <a href="#contacts" class="menu__link">контакты</a>
                 </nav>
                 <div class="header__btn">
-                    <a href="#" class="btn btn--primary">СТАТУС РЕМОНТА</a>
+                    <a href="#status" class="btn btn--primary btn--sm">СТАТУС РЕМОНТА</a>
                 </div>
             </header>
             <!-- /header -->
@@ -57,82 +48,449 @@
                 </div>
                 <div class="hero__image">
                     <div class="hero__image-wrapper"></div>
-                    <img src="img/hero.png" alt="#">
+                    <img src="img/hero.png" alt="ремонт">
                 </div>
             </div>
         </div>
     </section>
     <!-- /hero -->
-    <section class="services">
-        <div class="services__container container">
-            <div class="services__title">
-                <h2>Услуги</h2>
-            </div>
-            <div class="services__slider swiper">
-                <!-- Additional required wrapper -->
-                <div class="services__slider-wrapper swiper-wrapper">
-                  <!-- Slides -->
-                    <div class="services__slider-slide slide swiper-slide">
-                        <div class="slide__wrapper">
-                            <div class="slide__img slide__img-1">
-                                <img src="img/services/laptop.svg" alt="">
+
+    <!-- service -->
+    <div class="service" id="service">
+        <div class="service__container container">
+            <div class="main-wrapper">
+                <div class="swiper slider slider1">
+                    <div class="swiper-wrapper slider__wrapper">
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-1">
+                                    <img src="img/services/laptop.svg" alt="ноутбук">
+                                </div>
+                                <div class="slide__title">Ноутбуки</div>
+                                <div class="slide__text slide__text-1">Ремонтируем, восстанавливаем, меняем, чистим, настраиваем и устраняем практически все неисправности</div>
                             </div>
-                            <div class="slide__title">Ноутбуки</div>
-                            <div class="slide__text slide__text-1">Ремонтируем, восстанавливаем, меняем, чистим, настраиваем и устраняем практически все неисправности.</div>
                         </div>
-                    </div>
-                    <div class="services__slider-slide slide swiper-slide">
-                        <div class="slide__wrapper">
-                            <div class="slide__img slide__img-2">
-                                <img src="img/services/phone.svg" alt="">
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-2">
+                                    <img src="img/services/phone.svg" alt="телефон">
+                                </div>
+                                <div class="slide__title">Телефоны</div>
+                                <div class="slide__text slide__text-2">Специалисты сервисного центра осуществляют базовый ремонт сотовых телефонов за 15 минут</div>
                             </div>
-                            <div class="slide__title">Телефоны</div>
-                            <div class="slide__text slide__text-2">Специалисты сервисного центра осуществляют базовый ремонт сотовых телефонов за 15 минут.</div>
                         </div>
-                    </div>
-                    <div class="services__slider-slide slide swiper-slide">
-                        <div class="slide__wrapper">
-                            <div class="slide__img slide__img-3">
-                                <img src="img/services/tablet.svg" alt="">
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-3">
+                                    <img src="img/services/tablet.svg" alt="планшет">
+                                </div>
+                                <div class="slide__title">Планшеты</div>
+                                <div class="slide__text slide__text-3">Ремонтируем неисправные планшеты. Первую диагностику планшета можно произвести сразу же на месте</div>
                             </div>
-                            <div class="slide__title">Планшеты</div>
-                            <div class="slide__text slide__text-3">Ремонтируем неисправные планшеты. Первую диагностику планшета можно произвести сразу же на месте.</div>
                         </div>
-                    </div>
-                    <div class="services__slider-slide slide swiper-slide">
-                        <div class="slide__wrapper">
-                            <div class="slide__img slide__img-4">
-                                <img src="img/services/comp.svg" alt="">
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-4">
+                                    <img src="img/services/comp.svg" alt="компьютер">
+                                </div>
+                                <div class="slide__title">Компьютеры</div>
+                                <div class="slide__text slide__text-4">Наши специалисты осуществляют качественный ремонт компьютеров любых производителей</div>
                             </div>
-                            <div class="slide__title">Компьютеры</div>
-                            <div class="slide__text slide__text-4">Наши специалисты осуществляют качественный ремонт компьютеров любых производителей.</div>
                         </div>
-                    </div>
-                    <div class="services__slider-slide slide swiper-slide">
-                        <div class="slide__wrapper">
-                            <div class="slide__img slide__img-5">
-                                <img src="img/services/foto.svg" alt="">
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-5">
+                                    <img src="img/services/foto.svg" alt="фотоаппарат">
+                                </div>
+                                <div class="slide__title">Фотоаппараты</div>
+                                <div class="slide__text slide__text-5">Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов</div>
                             </div>
-                            <div class="slide__title">Фотоаппараты</div>
-                            <div class="slide__text slide__text-5">Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов.</div>
                         </div>
-                    </div>
-                    <div class="services__slider-slide slide swiper-slide">
-                        <div class="slide__wrapper">
-                            <div class="slide__img slide__img-6">
-                                <img src="img/services/play.svg" alt="">
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-6">
+                                    <img src="img/services/play.svg" alt="плеер">
+                                </div>
+                                <div class="slide__title">Плееры</div>
+                                <div class="slide__text slide__text-6">Ремонт плееров любых производителей c предварительной диагностикой и последующим восстановление</div>
                             </div>
-                            <div class="slide__title">Плееры</div>
-                            <div class="slide__text slide__text-6">Ремонт плееров любых производителей c предварительной диагностикой и последующим восстановление.</div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-1">
+                                    <img src="img/services/laptop.svg" alt="ноутбук">
+                                </div>
+                                <div class="slide__title">Ноутбуки</div>
+                                <div class="slide__text slide__text-1">Ремонтируем, восстанавливаем, меняем, чистим, настраиваем и устраняем практически все неисправности</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-2">
+                                    <img src="img/services/phone.svg" alt="телефон">
+                                </div>
+                                <div class="slide__title">Телефоны</div>
+                                <div class="slide__text slide__text-2">Специалисты сервисного центра осуществляют базовый ремонт сотовых телефонов за 15 минут</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-3">
+                                    <img src="img/services/tablet.svg" alt="планшет">
+                                </div>
+                                <div class="slide__title">Планшеты</div>
+                                <div class="slide__text slide__text-3">Ремонтируем неисправные планшеты. Первую диагностику планшета можно произвести сразу же на месте</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-4">
+                                    <img src="img/services/comp.svg" alt="компьютер">
+                                </div>
+                                <div class="slide__title">Компьютеры</div>
+                                <div class="slide__text slide__text-4">Наши специалисты осуществляют качественный ремонт компьютеров любых производителей</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-5">
+                                    <img src="img/services/foto.svg" alt="фотоаппарат">
+                                </div>
+                                <div class="slide__title">Фотоаппараты</div>
+                                <div class="slide__text slide__text-5">Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-6">
+                                    <img src="img/services/play.svg" alt="плеер">
+                                </div>
+                                <div class="slide__title">Плееры</div>
+                                <div class="slide__text slide__text-6">Ремонт плееров любых производителей c предварительной диагностикой и последующим восстановление</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div> 
+                <div class="swiper slider slider2">
+                    <div class="swiper-wrapper slider__wrapper">
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-6">
+                                    <img src="img/services/play.svg" alt="плеер">
+                                </div>
+                                <div class="slide__title">Плееры</div>
+                                <div class="slide__text slide__text-6">Ремонт плееров любых производителей c предварительной диагностикой и последующим восстановление</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-5">
+                                    <img src="img/services/foto.svg" alt="фотоаппарат">
+                                </div>
+                                <div class="slide__title">Фотоаппараты</div>
+                                <div class="slide__text slide__text-5">Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-4">
+                                    <img src="img/services/comp.svg" alt="компьютер">
+                                </div>
+                                <div class="slide__title">Компьютеры</div>
+                                <div class="slide__text slide__text-4">Наши специалисты осуществляют качественный ремонт компьютеров любых производителей</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-3">
+                                    <img src="img/services/tablet.svg" alt="планшет">
+                                </div>
+                                <div class="slide__title">Планшеты</div>
+                                <div class="slide__text slide__text-3">Ремонтируем неисправные планшеты. Первую диагностику планшета можно произвести сразу же на месте</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-2">
+                                    <img src="img/services/phone.svg" alt="телефон">
+                                </div>
+                                <div class="slide__title">Телефоны</div>
+                                <div class="slide__text slide__text-2">Специалисты сервисного центра осуществляют базовый ремонт сотовых телефонов за 15 минут</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-1">
+                                    <img src="img/services/laptop.svg" alt="ноутбук">
+                                </div>
+                                <div class="slide__title">Ноутбуки</div>
+                                <div class="slide__text slide__text-1">Ремонтируем, восстанавливаем, меняем, чистим, настраиваем и устраняем практически все неисправности</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-6">
+                                    <img src="img/services/play.svg" alt="плеер">
+                                </div>
+                                <div class="slide__title">Плееры</div>
+                                <div class="slide__text slide__text-6">Ремонт плееров любых производителей c предварительной диагностикой и последующим восстановление</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-5">
+                                    <img src="img/services/foto.svg" alt="фотоаппарат">
+                                </div>
+                                <div class="slide__title">Фотоаппараты</div>
+                                <div class="slide__text slide__text-5">Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-4">
+                                    <img src="img/services/comp.svg" alt="компьютер">
+                                </div>
+                                <div class="slide__title">Компьютеры</div>
+                                <div class="slide__text slide__text-4">Наши специалисты осуществляют качественный ремонт компьютеров любых производителей</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-3">
+                                    <img src="img/services/tablet.svg" alt="планшет">
+                                </div>
+                                <div class="slide__title">Планшеты</div>
+                                <div class="slide__text slide__text-3">Ремонтируем неисправные планшеты. Первую диагностику планшета можно произвести сразу же на месте</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-2">
+                                    <img src="img/services/phone.svg" alt="телефон">
+                                </div>
+                                <div class="slide__title">Телефоны</div>
+                                <div class="slide__text slide__text-2">Специалисты сервисного центра осуществляют базовый ремонт сотовых телефонов за 15 минут</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-1">
+                                    <img src="img/services/laptop.svg" alt="ноутбук">
+                                </div>
+                                <div class="slide__title">Ноутбуки</div>
+                                <div class="slide__text slide__text-1">Ремонтируем, восстанавливаем, меняем, чистим, настраиваем и устраняем практически все неисправности</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <h2 class="service__title">Мы предлагаем</h2> услуги <span class="span">по ремонту</span> и восстановлению цифровой техники. Наши специалисты <span class="span">помогут Вам</span> в любой ситуации и всегда пойдут навстречу, при этом <span class="span">мы гарантируем</span> соблюдение сроков исполнения ремонта техники
+            </div>
+        </div>
+    </div>
+    <!-- service -->
+
+    <!-- price -->
+    <section class="price" id="price">
+        <div class="price__container container">
+            <div class="price__title title">
+                <h2>Цены</h2>
+            </div>
+            <div class="price__accordion accordion">
+                <div class="accordion__item">
+                    <div class="accordion__trigger">
+                        <div class="accordion__title">Диагностика</div>
+                        <button class="trigger"></button>
+                    </div>
+                    <div class="accordion__text">Стоимость диагностки - 300 рублей<br>При последующем ремонте диагностика бесплатно</div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__trigger">
+                        <div class="accordion__title">Ремонт телефона</div>
+                        <button class="trigger"></button>
+                    </div>
+                    <div class="accordion__text">Стоимость диагностки - 300 рублей<br>При последующем ремонте диагностика бесплатно</div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__trigger">
+                        <div class="accordion__title">Ремонт планшета</div>
+                        <button class="trigger"></button>
+                    </div>
+                    <div class="accordion__text">Стоимость диагностки - 300 рублей<br>При последующем ремонте диагностика бесплатно</div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__trigger">
+                        <div class="accordion__title">Ремонт ноутбука</div>
+                        <button class="trigger"></button>
+                    </div>
+                    <div class="accordion__text">Стоимость диагностки - 300 рублей<br>При последующем ремонте диагностика бесплатно</div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__trigger">
+                        <div class="accordion__title">Ремонт компьтера</div>
+                        <button class="trigger"></button>
+                    </div>
+                    <div class="accordion__text">Стоимость диагностки - 300 рублей<br>При последующем ремонте диагностика бесплатно</div>
+                </div>
+            </div>
+            <div class="price__text">Для уточнения точной стоимости ремонта цифровой техники -<br>позвоните нам</div>
+            <div class="price__btn">
+                <a href="#" class="btn btn--primary">Связаться</a>
+            </div>
         </div>
     </section>
+    <!-- /price -->
 
+    <!-- reviews -->
+    <section class="reviews" id="reviews">
+        <div class="reviews__container container">
+            <div class="reviews__title">
+                <h2>Отзывы наших клиентов</h2>
+            </div>
+            <div class="reviews__items">
+                <div class="reviews__item">
+                    <div class="reviews__item-wrapper">
+                        <div class="reviews__author">Дмитрий Попов</div>
+                        <div class="reviews__text">Поменяли заднюю панель и дисплей на iPhone 6, сделали все быстро, качественно и недорого. Я попросил мастера приехать ко мне в офис, и уже через час мой телефон был отремонтирован! Спасибо большое!</div>
+                        <div class="reviews__signature">
+                            <div class="reviews__date">21.10.2022 13:17</div>
+                            <div class="reviews__checkmark">
+                                <img src="img/read.svg" alt="checkmark">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__item-wrapper">
+                        <div class="reviews__author">Жаслан Илуб</div>
+                        <div class="reviews__text">Отличный сервис и низкие цены! Ребята помогли мне отремонтировать ноутбук, когда я уже думал что он больше не будет работать! Спасибо!</div>
+                        <div class="reviews__signature">
+                            <div class="reviews__date">24.05.2022 19:03</div>
+                            <div class="reviews__checkmark">
+                                <img src="img/read.svg" alt="checkmark">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__item-wrapper">
+                        <div class="reviews__author">Асия Касенова</div>
+                        <div class="reviews__text">Уже не первый раз обращаюсь сюда со своим компьютером. И каждый раз остаюсь довольна работой, обращением и ценовой политикой. Спасибо большое!</div>
+                        <div class="reviews__signature">
+                            <div class="reviews__date">05.03.2022 08:04</div>
+                            <div class="reviews__checkmark">
+                                <img src="img/read.svg" alt="checkmark">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <div class="reviews__item-wrapper">
+                        <div class="reviews__author">Эльмира Маннанова</div>
+                        <div class="reviews__text">Обратилась в субботу. Сдавала телефон Samsung Galaxy с разбитым стеклом, забрала как новенький, и цены не завышены. Буду без сомнения рекомендовать вас!</div>
+                        <div class="reviews__signature">
+                            <div class="reviews__date">13.07.2022 10:04</div>
+                            <div class="reviews__checkmark">
+                                <img src="img/read.svg" alt="checkmark">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /reviews -->
+
+    <!-- sale -->
+    <section class="sale">
+        <div class="sale__wrapper"></div>
+        <div class="sale__container container">
+            <div class="sale__offer">-10% на покупку аксессуаров</div>
+            <div class="sale__text">Оставьте отзыв и получите скидку 10% на покупку<br>аксессуаров в нашем сервисном центре!</div>
+            <div class="sale__btn">
+                <a href="#" class="btn btn--secondary">оставить отзыв</a>
+            </div>
+        </div>
+    </section>
+    <!-- /sale -->
+
+    <!-- status -->
+    <div class="status" id="status">
+        <div class="status__container container">
+            <div class="status__bg">
+                <img src="img/iphone.png" alt="phone">
+            </div>
+            <div class="status__content">
+                <div class="status__title">
+                    <h2>Узнать статус ремонта</h2>
+                </div>
+                <div class="status__right">
+                    <div class="status__text">Узнайте больше о статусе ремонта вашей техники. Введите номер квитанции и  узнайте, на какой стадии ремонта находится техника</div>
+                    <form action="" class="status__form">
+                        <input type="text" class="status__input" placeholder="Укажите номер квитанции">
+                        <button class="status__btn" type="submit"></button>
+                    </form>
+                </div>
+                <div class="status__info">
+                    <div class="status__info-left">
+                        <div class="status__info-left-item">
+                            <div class="receipt">Номер квитанции: 100000</div>
+                            <div class="stage">Статус: готов</div>
+                        </div>
+                        <div class="status__info-left-item">
+                            <div class="model">Модель: Iphone 8 plus</div>
+                            <div class="cost">Стоимость: 500 руб.</div>
+                        </div>
+                    </div>
+                    <div class="status__info-right">
+                        <div class="text">Уточнить подробности по телефону</div>
+                        <div class="number">
+                            <a href=”tel:+79125758850”>+7 (912) 575 88 50</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /status -->
+
+    <!-- contacts -->
+    <section class="contacts" id="contacts">
+        <div class="contacts__container container">
+            <div id="map" class="map"></div>
+            <div class="contacts__content">
+                <div class="contacts__title">
+                    <h2>Контакты</h2>
+                </div>
+                <div class="contacts__item">
+                    <div class="contacts__item-title active">Наш офис в городе Катайске</div>
+                    <div class="contacts__item-address"><span>Адрес:</span> г. Катайск, ул. Ленина, д. 223</div>
+                    <div class="contacts__item-work"><span>График работы:</span><br>ПН-ПТ 09:00 - 18:00<br>СБ 09:00 - 14:00<br>ВС выходной<br>ОБЕД 12:00 - 13:00</div>
+                </div>
+                <div class="contacts__item">
+                    <div class="contacts__item-title">Наш офис в городе Далматово</div>
+                    <div class="contacts__item-address"><span>Адрес:</span> г. Далматово, ул. 4-го Уральского полка, д. 97</div>
+                    <div class="contacts__item-work"><span>График работы:</span><br>ПН-ПТ 09:00 - 18:00<br>СБ 09:00 - 14:00<br>ВС выходной<br>ОБЕД 13:00 - 14:00</div>
+                </div>
+            </div>
+            <div class="contacts__links">
+                <div class="contacts__phone">
+                    <a href="tel:+79125758850" target="_blank">+7 (912) 575 88 50</a>
+                </div>
+                <div class="contacts__email">
+                    <a href="mailto:allen0707@yandex.ru" target="_blank">allen0707@yandex.ru</a>
+                </div>
+                <div class="contacts__text">
+                    <a href="https://vk.com/club201726223" target="_blank">Присоединяйтесь к нам Вконтакте!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /contacts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/mapbasics.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

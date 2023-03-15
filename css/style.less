@@ -1,13 +1,15 @@
 // main ---------------------
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 400;
 }
 .container {
-    max-width: 1870px;
-    padding: 0 25px;
+    max-width: 1920px;
+    padding: 0 40px;
     margin: 0 auto
 }
 .btn {
@@ -15,7 +17,7 @@ body {
     width: 315px;
     border-radius: 45px;
     padding: 25px 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
@@ -23,6 +25,7 @@ body {
 
 // sections ---------------------
 
+// hero ---------------------
 .hero {
     &__image {
         overflow: hidden;
@@ -47,8 +50,210 @@ body {
     }
 }
 
+// service ---------------------
 
+.service{
+    height: 1000px;
+    background-color: @bgrey;
+    overflow: hidden;
+}
+.service__container{
+    max-width: 1920px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-wrapper {
+    display: flex;
+    overflow: visible;
+    height: 100%;
+    width: 53%;
+    gap: 10px;
+}
+.main-content{
+    width: 832px;
+    height: 100%;
+    font-size: 36px;
+    line-height: 1.22;
+    .service__title {
+        display: inline;
+        font-size: 48px;
+        font-weight: 700;
+    }
+    .span {
+        color: @accentColor;
+    }
+}
+.slider {
+    height: 1000px;
+    width: 50%;
+    transform: rotate(10deg);
+    overflow: visible;
+}
+.slider1{
+    .slider__wrapper {
+        align-items: center;
+    }
+    .slider__item-wrapper{
+        transform: rotate(180deg);
+    }
+    transform: rotate(190deg);
+}
+.slider2{
+    transform: rotate(10deg);
+}
+.slider__item-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.slider__wrapper {
+    will-change: transform;
+}
+.slider__item {
+    width: 330px !important;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.slide__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img {
+        object-position: center;
+    }
+}
+.slide__title {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 30px 0px 30px;
+}
+.slide__text {
+    font-size: 16px;
+    line-height: 1.22;
+}
 
+// reviews---------------------
+
+.reviews__item {
+    .reviews__item-wrapper {
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background: url(../img/reviews.svg);
+            width: 28px;
+            height: 52px;
+        }
+    }
+    &:nth-child(even){
+        .reviews__item-wrapper::after{
+            top: 99%;
+            right: 70px;
+            transform: rotateY(180deg);
+        }
+    
+    }
+    &:nth-child(odd){
+        .reviews__item-wrapper::after{
+            top: 99%;
+            left: 70px;
+        }
+        
+    }
+}
+
+// status ---------------------
+
+.status__btn {
+    background: url('../img/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.number {
+    a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 33px;
+        height: 36px;
+        background: url('../img/phone.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+// contacts---------------------
+
+.contacts__phone {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 23px;
+        background: url('../img/phoneW.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.contacts__email {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 15px;
+    a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: 20px;
+        background: url('../img/mailW.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.contacts__text {
+    position: relative;
+    padding-left: 48px;
+    a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: 26px;
+        background: url('../img/vk.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+// sale--------------------
+
+.sale {
+    height: 600px;
+    background: url(../img/sale.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
 
 // blocks ---------------------
 
@@ -56,171 +261,27 @@ body {
 @import "blocks/vars.less";
 @import "blocks/header.less";
 @import "blocks/hero.less";
-@import "blocks/services.less";
+@import "blocks/price.less";
+@import "blocks/reviews.less";
+@import "blocks/sale.less";
+@import "blocks/status.less";
+@import "blocks/contacts.less";
 
 
 // breakpoints ---------------------
-@media (max-width: 1840px) {
-    // hero
-    .hero__title {
-        font-size: 54px;
-    }
-    .hero__text {
-        font-size: 34px;
-    }
-
-    // header
-    .menu__link {
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    // services
-    .services__slider {
-        width: 100%;
-        padding: 0 50px;
-    }
-
-    // main
+@media (max-width: 1920px) {
     .btn {
-        display: block;
-        width: 285px;
-        border-radius: 45px;
-        padding: 20px 0;
-        font-size: 20px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
-@media (max-width: 1680px) {
-    // services
-    .services__slider {
-        width: 100%;
-        height: 700px;
-        padding: 0 50px;
-    }
-    .slide__wrapper {
-        width: 380px;
-        padding: 20px;
-    }
-}
-@media (max-width: 1560px) {
-    // hero
-    .hero__title {
-        font-size: 46px;
-    }
-    .hero__text {
-        font-size: 28px;
-    }
-
-    // header
-    .menu__link {
-        font-size: 16px;
-        font-weight: 600;
-    }
-
-    // services
-    .services__slider {
-        width: 100%;
-        padding: 0 50px;
-    }
-    .slide__wrapper {
-        width: 360px;
-        height: 480px;
-        padding: 15px;
-    }
-
-    // main
-    .btn {
-        display: block;
-        width: 265px;
-        border-radius: 45px;
-        padding: 20px 0;
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
-@media (max-width: 1480px) {
-    // services
-    .services__slider {
-        width: 100%;
-        padding: 0 50px;
-    }
-    .slide__wrapper {
-        width: 325px;
-        padding: 20px;
-    }
-}
-@media (max-width: 1340px) {
-    // hero
-    .hero__title {
-        font-size: 40px;
-    }
-    .hero__text {
+        width: calc(218px + (315 - 218)*((100vw - 1024px) / (1920 - 1024)));
+        padding: 25px 0;
         font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
     }
-
-    // header
     .menu__link {
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    // services
-    .services__slider {
-        width: 100%;
-        padding: 0 40px;
-    }
-    .slide__wrapper {
-        height: 460px;
-        width: 290px;
-        padding: 20px;
-    }
-
-    // main
-    .btn {
-        display: block;
-        width: 200px;
-        border-radius: 45px;
-        padding: 15px 0;
-        font-size: 14px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
-@media (max-width: 1200px) {
-    // hero
-    .hero__title {
-        font-size: 34px;
-    }
-    .hero__text {
-        font-size: 22px;
-    }
-
-    // services
-    .services__slider {
-        width: 100%;
-        padding: 0 35px;
-    }
-    .slide__wrapper {
-        height: 430px;
-        width: 270px;
-        padding: 20px;
-    }
-
-    // main
-    .btn {
-        display: block;
-        width: 235px;
-        border-radius: 45px;
-        padding: 20px 0;
-        font-size: 12px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
+        font-size: calc(14px + (20 - 14)*((100vw - 1024px) / (1920 - 1024)));
+        &:not(:last-child) {
+            margin-right: calc(39px + (100 - 39)*((100vw - 1024px) / (1920 - 1024)));
+        }
     }
 }
