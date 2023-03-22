@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ремонт цифровой техники</title>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
     
@@ -26,13 +29,23 @@
                     </a>
                 </div>
                 <nav class="header__menu menu">
-                    <a href="#service" class="menu__link">услуги</a>
-                    <a href="#price" class="menu__link">цены</a>
-                    <a href="#reviews" class="menu__link">отзывы</a>
-                    <a href="#contacts" class="menu__link">контакты</a>
+                    <div class="menu-list">
+                        <a href="#hero" class="header__sub-link">
+                            <img src="img/logo.svg" alt="лого">
+                        </a>
+                        <a href="#service" class="menu__link">услуги</a>
+                        <a href="#price" class="menu__link">цены</a>
+                        <a href="#reviews" class="menu__link">отзывы</a>
+                        <a href="#contacts" class="menu__link">контакты</a>
+                    </div>
                 </nav>
                 <div class="header__btn">
                     <a href="#status" class="btn btn--primary btn--sm">СТАТУС РЕМОНТА</a>
+                </div>
+                <div class="menu-burger-wrapper">
+                    <div class="menu-burger">
+                        <span></span>
+                    </div>
                 </div>
             </header>
             <!-- /header -->
@@ -283,9 +296,71 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper slider3">
+                    <div class="swiper-wrapper slider3__wrapper">
+                        <div class="swiper-slide slider3__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-1">
+                                    <img src="img/services/laptop.svg" alt="ноутбук">
+                                </div>
+                                <div class="slide__title">Ноутбуки</div>
+                                <div class="slide__text slide__text-1">Ремонтируем, восстанавливаем, меняем, чистим, настраиваем и устраняем практически все неисправности</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider3__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-2">
+                                    <img src="img/services/phone.svg" alt="телефон">
+                                </div>
+                                <div class="slide__title">Телефоны</div>
+                                <div class="slide__text slide__text-2">Специалисты сервисного центра осуществляют базовый ремонт сотовых телефонов за 15 минут</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider3__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-3">
+                                    <img src="img/services/tablet.svg" alt="планшет">
+                                </div>
+                                <div class="slide__title">Планшеты</div>
+                                <div class="slide__text slide__text-3">Ремонтируем неисправные планшеты. Первую диагностику планшета можно произвести сразу же на месте</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider3__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-4">
+                                    <img src="img/services/comp.svg" alt="компьютер">
+                                </div>
+                                <div class="slide__title">Компьютеры</div>
+                                <div class="slide__text slide__text-4">Наши специалисты осуществляют качественный ремонт компьютеров любых производителей</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider3__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-5">
+                                    <img src="img/services/foto.svg" alt="фотоаппарат">
+                                </div>
+                                <div class="slide__title">Фотоаппараты</div>
+                                <div class="slide__text slide__text-5">Наш сервисный центр оказывает полный комплекс профессиональных услуг по ремонту зеркальных и цифровых фотоаппаратов</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider3__item">
+                            <div class="slider__item-wrapper">
+                                <div class="slide__img slide__img-6">
+                                    <img src="img/services/play.svg" alt="плеер">
+                                </div>
+                                <div class="slide__title">Плееры</div>
+                                <div class="slide__text slide__text-6">Ремонт плееров любых производителей c предварительной диагностикой и последующим восстановление</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-prev"></div>
+                    <div class="button-next"></div>
+                </div>
             </div>
             <div class="main-content">
-                <h2 class="service__title">Мы предлагаем</h2> услуги <span class="span">по ремонту</span> и восстановлению цифровой техники. Наши специалисты <span class="span">помогут Вам</span> в любой ситуации и всегда пойдут навстречу, при этом <span class="span">мы гарантируем</span> соблюдение сроков исполнения ремонта техники
+                <div class="main-content-wrapper">
+                    <h2 class="service__title">Мы предлагаем</h2> услуги <span class="span">по ремонту</span> и восстановлению цифровой техники. Наши специалисты <span class="span">помогут Вам</span> в любой ситуации и всегда пойдут навстречу, при этом <span class="span">мы гарантируем</span> соблюдение сроков исполнения ремонта техники
+                </div>
             </div>
         </div>
     </div>
@@ -334,7 +409,7 @@
                     <div class="accordion__text">Стоимость диагностки - 300 рублей<br>При последующем ремонте диагностика бесплатно</div>
                 </div>
             </div>
-            <div class="price__text">Для уточнения точной стоимости ремонта цифровой техники -<br>позвоните нам</div>
+            <div class="price__text">Для уточнения точной стоимости ремонта цифровой техники - позвоните нам</div>
             <div class="price__btn">
                 <a href="#" class="btn btn--primary">Связаться</a>
             </div>
@@ -349,7 +424,7 @@
                 <h2>Отзывы наших клиентов</h2>
             </div>
             <div class="reviews__items">
-                <div class="reviews__item">
+                <div class="reviews__item reviews__item1">
                     <div class="reviews__item-wrapper">
                         <div class="reviews__author">Дмитрий Попов</div>
                         <div class="reviews__text">Поменяли заднюю панель и дисплей на iPhone 6, сделали все быстро, качественно и недорого. Я попросил мастера приехать ко мне в офис, и уже через час мой телефон был отремонтирован! Спасибо большое!</div>
@@ -361,7 +436,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews__item">
+                <div class="reviews__item reviews__item2">
                     <div class="reviews__item-wrapper">
                         <div class="reviews__author">Жаслан Илуб</div>
                         <div class="reviews__text">Отличный сервис и низкие цены! Ребята помогли мне отремонтировать ноутбук, когда я уже думал что он больше не будет работать! Спасибо!</div>
@@ -373,7 +448,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews__item">
+                <div class="reviews__item reviews__item3">
                     <div class="reviews__item-wrapper">
                         <div class="reviews__author">Асия Касенова</div>
                         <div class="reviews__text">Уже не первый раз обращаюсь сюда со своим компьютером. И каждый раз остаюсь довольна работой, обращением и ценовой политикой. Спасибо большое!</div>
@@ -385,7 +460,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews__item">
+                <div class="reviews__item reviews__item4">
                     <div class="reviews__item-wrapper">
                         <div class="reviews__author">Эльмира Маннанова</div>
                         <div class="reviews__text">Обратилась в субботу. Сдавала телефон Samsung Galaxy с разбитым стеклом, забрала как новенький, и цены не завышены. Буду без сомнения рекомендовать вас!</div>
@@ -407,7 +482,7 @@
         <div class="sale__wrapper"></div>
         <div class="sale__container container">
             <div class="sale__offer">-10% на покупку аксессуаров</div>
-            <div class="sale__text">Оставьте отзыв и получите скидку 10% на покупку<br>аксессуаров в нашем сервисном центре!</div>
+            <div class="sale__text">Оставьте отзыв и получите скидку 10% на покупку аксессуаров в нашем сервисном центре!</div>
             <div class="sale__btn">
                 <a href="#" class="btn btn--secondary">оставить отзыв</a>
             </div>
@@ -429,13 +504,13 @@
                     <div class="status__text">Узнайте больше о статусе ремонта вашей техники. Введите номер квитанции и  узнайте, на какой стадии ремонта находится техника</div>
                     <form action="" class="status__form">
                         <input type="text" class="status__input" placeholder="Укажите номер квитанции">
-                        <button class="status__btn" type="submit"></button>
+                        <button class="status__btn" type="reset"></button>
                     </form>
                 </div>
                 <div class="status__info">
                     <div class="status__info-left">
                         <div class="status__info-left-item">
-                            <div class="receipt">Номер квитанции: 100000</div>
+                            <div class="receipt">Номер квитанции: 1111111111111111111</div>
                             <div class="stage">Статус: готов</div>
                         </div>
                         <div class="status__info-left-item">
@@ -446,7 +521,7 @@
                     <div class="status__info-right">
                         <div class="text">Уточнить подробности по телефону</div>
                         <div class="number">
-                            <a href=”tel:+79125758850”>+7 (912) 575 88 50</a>
+                            <a href="tel:+79125758850">+7 (912) 575 88 50</a>
                         </div>
                     </div>
                 </div>
@@ -465,18 +540,18 @@
                 </div>
                 <div class="contacts__item">
                     <div class="contacts__item-title active">Наш офис в городе Катайске</div>
-                    <div class="contacts__item-address"><span>Адрес:</span> г. Катайск, ул. Ленина, д. 223</div>
-                    <div class="contacts__item-work"><span>График работы:</span><br>ПН-ПТ 09:00 - 18:00<br>СБ 09:00 - 14:00<br>ВС выходной<br>ОБЕД 12:00 - 13:00</div>
+                    <div class="contacts__item-address contacts__item-address1"><span>Адрес:</span> г. Катайск, ул. Ленина, д. 223</div>
+                    <div class="contacts__item-work contacts__item-work1"><span>График работы:</span><br>ПН-ПТ 09:00 - 18:00<br>СБ 09:00 - 14:00<br>ВС выходной<br>ОБЕД 12:00 - 13:00</div>
                 </div>
                 <div class="contacts__item">
                     <div class="contacts__item-title">Наш офис в городе Далматово</div>
-                    <div class="contacts__item-address"><span>Адрес:</span> г. Далматово, ул. 4-го Уральского полка, д. 97</div>
-                    <div class="contacts__item-work"><span>График работы:</span><br>ПН-ПТ 09:00 - 18:00<br>СБ 09:00 - 14:00<br>ВС выходной<br>ОБЕД 13:00 - 14:00</div>
+                    <div class="contacts__item-address contacts__item-address2"><span>Адрес:</span> г. Далматово, ул. 4-го Уральского полка, д. 97</div>
+                    <div class="contacts__item-work contacts__item-work2"><span>График работы:</span><br>ПН-ПТ 09:00 - 18:00<br>СБ 09:00 - 14:00<br>ВС выходной<br>ОБЕД 13:00 - 14:00</div>
                 </div>
             </div>
             <div class="contacts__links">
                 <div class="contacts__phone">
-                    <a href="tel:+79125758850" target="_blank">+7 (912) 575 88 50</a>
+                    <a href="tel:+79125758850">+7 (912) 575 88 50</a>
                 </div>
                 <div class="contacts__email">
                     <a href="mailto:allen0707@yandex.ru" target="_blank">allen0707@yandex.ru</a>
@@ -488,10 +563,49 @@
         </div>
     </section>
     <!-- /contacts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <div class="footer__main">
+                <div class="footer__logo">
+                    <a href="#hero" class="footer__link">
+                        <img src="img/logo.svg" alt="лого">
+                    </a>
+                </div>
+                <div class="footer__rights">&copy; 2023 Все права защищены</div>
+                <div class="footer__info">ИП Мешалкин А.И.<br>ИНН 123456789<br>ОГРНИП 123456789</div>
+                <div class="footer__policy">Политика конфиденциальности</div>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__title">НАВИГАЦИЯ</div>
+                <div class="footer__nav-list">
+                    <a class="footer__nav-link" href="#service">Услуги</a>
+                    <a class="footer__nav-link" href="#price">цены</a>
+                    <a class="footer__nav-link" href="#reviews">отзывы</a>
+                    <a class="footer__nav-link" href="#contacts">контакты</a>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__title">КОНТАКТЫ</div>
+                <div class="footer__number">
+                    <a href="tel:+79125758850">+7 (912) 575 88 50</a>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__text">Напишите  нам:</div>
+                    <a class="mail" href="mailto:allen0707@yandex.ru" target="_blank"></a>
+                    <a class="vk" href="https://vk.com/club201726223" target="_blank"></a>
+                </div>
+                <div class="footer__developer">
+                    <div class="footer__developer-text">Разработка сайта</div>
+                    <a href="#" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
     <script src="js/mapbasics.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

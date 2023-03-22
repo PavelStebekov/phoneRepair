@@ -10,18 +10,26 @@
     left: 0;
     right: 0;
     z-index: 2;
-    padding: 0 40px 0 30px;
+    padding: 0 40px;
 }
 .header__logo {
-    width: 236px;
+    width: 202px;
     & img {
         width: 100%;
     }
 }
 .menu {
     flex: 1 1 auto;
+}
+.menu-list {
     display: flex;
     justify-content: center;
+}
+.menu-burger {
+    display: none;
+}
+.header__sub-link {
+    display: none;
 }
 .menu__link {
     font-size: 20px;
@@ -50,7 +58,7 @@
     }
 }
 .btn--sm {
-    width: 249px;
-    padding: 22px 47px;
+    width: 250px;
+    padding: 22px 0;
     font-size: 16px;
 }

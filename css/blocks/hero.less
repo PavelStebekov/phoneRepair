@@ -4,11 +4,12 @@
     height: 100vh;
     background-color: @bgdark;
     overflow: hidden;
+    position: relative;
 }
 .hero__container {
     position: relative;
     padding-right: 0;
-    max-width: 1890px;
+    max-width: 1920px;
     height: 100vh;
 }
 .main {
@@ -16,13 +17,14 @@
     height: 100vh;
 }
 .hero__content {
-    flex: 0 0 39%;
+    flex: 0 0 38%;
     margin-top: 31vh;
 }
 .contain {
-    width: 92%;
+    width: 100%;
 }
 .hero__title {
+    width: 100%;
     font-size: 64px;
     font-weight: 700;
     color: #fff;
@@ -32,7 +34,9 @@
     }
 }
 .hero__text {
-    font-size: 40px;
+    width: 90%;
+    max-width: 610px;
+    font-size: 38px;
     line-height: 1.1;
     color: #fff;
     margin-bottom: 10vh;
@@ -40,6 +44,7 @@
 .hero__btn {
     display: flex;
     justify-content: center;
+    width: 90%;
 }
 .btn--no-bg {
     border: 3px solid @accentColor;
