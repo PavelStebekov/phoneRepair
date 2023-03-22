@@ -39,6 +39,12 @@ function init () {
     myMap.geoObjects.add(placemark2);
     
 
+    let windowInnerWidth = window.innerWidth;
+    if (windowInnerWidth < '768') {
+        myMap.behaviors.disable('drag');
+    };
+    
+
     function clickGoto() {
         let pos = this.textContent;
         const parentColAll = document.querySelectorAll('.contacts__item');

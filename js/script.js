@@ -1,11 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// accordion
 const trigger = document.querySelectorAll('.trigger');
 for (let i = 0; i < trigger.length; i++) {
   trigger[i].addEventListener('click', ()=> {
-    const parent = trigger[i].closest('.accordion__item');
-    const child = parent.querySelector('.accordion__text');
+    let parent = trigger[i].closest('.accordion__item');
+    let child = parent.querySelector('.accordion__text');
     if (parent.classList.contains('accordion__item-active')){
       parent.classList.remove('accordion__item-active');
       gsap.to(child, {duration: 0.4, marginTop: 0, height: 0, opacity: 0});
@@ -13,8 +12,7 @@ for (let i = 0; i < trigger.length; i++) {
       const parentAll = document.querySelectorAll('.accordion__item');
       for (let k = 0; k < trigger.length; k++){
         parentAll[k].classList.remove('accordion__item-active');
-        const childs = parentAll[k].querySelector('.accordion__text');
-        gsap.to(childs, {duration: 0.4, marginTop: 0, height: 0, opacity: 0});
+        gsap.to(parentAll[k].querySelector('.accordion__text'), {duration: 0.4, marginTop: 0, height: 0, opacity: 0});
       }
       parent.classList.add('accordion__item-active');
       gsap.to(child, {duration: 0.4, marginTop: 30, height: child.scrollHeight, opacity: 1});
@@ -22,12 +20,10 @@ for (let i = 0; i < trigger.length; i++) {
   })
 }
 
-// slider
 const slider1 = new Swiper('.slider1', {
   direction: 'vertical',
   spaceBetween: 60,
   loop: true,
-  loopFillGroupWithBlank: true,
   mousewheel: true,
   mousewheel: {
     sensitivity: 0.25,
@@ -64,12 +60,10 @@ const slider1 = new Swiper('.slider1', {
     },
   }
 });
-
 const slider2 = new Swiper('.slider2', {
   direction: 'vertical',
   spaceBetween: 60,
   loop: true,
-  loopFillGroupWithBlank: true,
   mousewheel: true,
   mousewheel: {
     sensitivity: 0.25,
@@ -136,7 +130,6 @@ const slider3 = new Swiper('.slider3', {
     prevEl: '.button-prev',
   },
 })
-
 slider1.controller.control = slider2;
 slider2.controller.control = slider1;
 
@@ -151,7 +144,6 @@ gsap.to(".contain", {
     scrub: true,
   }, 
 });
-
 gsap.to(".hero__image", {
   yPercent: 10,
   ease: "none",
@@ -169,7 +161,6 @@ tl.from (".header", {duration: 1.2, opacity: 0});
 tl.from (".hero__title", {duration: 0.8, y: 200, opacity: 0});
 tl.from (".hero__text", {duration: 0.8, y: 200, opacity: 0}, '-=0.7');
 tl.from (".hero__btn", {duration: 0.8, opacity: 0});
-
 
 // service animation
 const tl2 = gsap.timeline({scrollTrigger:{

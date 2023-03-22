@@ -1292,7 +1292,7 @@ body {
     .contacts__content {
         width: calc(259px + (331 - 259)*((100vw - 320px) / (768 - 320)));
         top: calc(40px + (75 - 40)*((100vw - 320px) / (768 - 320)));
-        right: 15px;
+        right: 20px;
         padding: 15px calc(10px + (28 - 10)*((100vw - 320px) / (768 - 320)));
     }
     .contacts__title {
@@ -1329,38 +1329,98 @@ body {
         font-size: calc(10px + (12 - 10)*((100vw - 320px) / (768 - 320)));
     }
     .contacts__links{
-        width: calc(331px + (645 - 331)*((100vw - 768px) / (1920 - 768)));
-        top: calc(468px + (776 - 468)*((100vw - 768px) / (1920 - 768)));
-        right: calc(15px + (202 - 15)*((100vw - 768px) / (1920 - 768)));
-        padding: calc(15px + (20 - 15)*((100vw - 768px) / (1920 - 768))) calc(20px + (50 - 20)*((100vw - 768px) / (1920 - 768)));
-        font-size: calc(13px + (24 - 13)*((100vw - 768px) / (1920 - 768)));
+        width: calc(259px + (331 - 259)*((100vw - 320px) / (768 - 320)));
+        top: calc(251px + (310 - 251)*((100vw - 320px) / (768 - 320)));
+        right: 20px;
+        padding: 15px calc(10px + (28 - 10)*((100vw - 320px) / (768 - 320)));
+        font-size: calc(10px + (13 - 10)*((100vw - 320px) / (768 - 320)));
     }
     .contacts__phone {
-        position: relative;
-        padding-left: calc(30px + (48 - 30)*((100vw - 768px) / (1920 - 768)));
-        margin-bottom: calc(10px + (15 - 10)*((100vw - 768px) / (1920 - 768)));
+        padding-left: calc(23px + (30 - 23)*((100vw - 320px) / (768 - 320)));
+        margin-bottom: calc(8px + (10 - 8)*((100vw - 320px) / (768 - 320)));
         a::before {
-            width: calc(11px + (21 - 11)*((100vw - 768px) / (1920 - 768)));
-            height: calc(12px + (23 - 12)*((100vw - 768px) / (1920 - 768)));
-            background-size: calc(11px + (21 - 11)*((100vw - 768px) / (1920 - 768))) calc(12px + (23 - 12)*((100vw - 768px) / (1920 - 768)));
+            width: calc(9px + (11 - 9)*((100vw - 320px) / (768 - 320)));
+            height: calc(10px + (12 - 10)*((100vw - 320px) / (768 - 320)));
+            background-size: contain;
         }
     }
     .contacts__email {
-        padding-left: calc(30px + (48 - 30)*((100vw - 768px) / (1920 - 768)));
-        margin-bottom: calc(10px + (15 - 10)*((100vw - 768px) / (1920 - 768)));
+        padding-left: calc(23px + (30 - 23)*((100vw - 320px) / (768 - 320)));
+        margin-bottom: calc(8px + (10 - 8)*((100vw - 320px) / (768 - 320)));
         a::before {
-            width: calc(16px + (26 - 16)*((100vw - 768px) / (1920 - 768)));
-            height: calc(12px + (20 - 12)*((100vw - 768px) / (1920 - 768)));
-            background-size: calc(16px + (26 - 16)*((100vw - 768px) / (1920 - 768))) calc(12px + (20 - 12)*((100vw - 768px) / (1920 - 768)));
+            width: calc(13px + (16 - 13)*((100vw - 320px) / (768 - 320)));
+            height: calc(10px + (12 - 10)*((100vw - 320px) / (768 - 320)));
+            background-size: contain;
         }
     }
     .contacts__text {
-        padding-left: calc(30px + (48 - 30)*((100vw - 768px) / (1920 - 768)));
+        padding-left: calc(23px + (30 - 23)*((100vw - 320px) / (768 - 320)));
         a::before {
-            width: calc(15px + (26 - 15)*((100vw - 768px) / (1920 - 768)));
-            height: calc(15px + (26 - 15)*((100vw - 768px) / (1920 - 768)));
-            background-size: calc(15px + (26 - 15)*((100vw - 768px) / (1920 - 768))) calc(15px + (26 - 15)*((100vw - 768px) / (1920 - 768)));
+            width: calc(12px + (15 - 12)*((100vw - 320px) / (768 - 320)));
+            height: calc(12px + (15 - 12)*((100vw - 320px) / (768 - 320)));
+            background-size: contain;
         }
+    }
+
+     // footer
+     .footer {
+        height: calc(240px + (290 - 240)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__container {
+        padding-top: calc(29px + (35 - 29)*((100vw - 768px) / (1920 - 768)));
+        padding-bottom: calc(29px + (35 - 29)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__main {
+        font-size: calc(10px + (14 - 10)*((100vw - 768px) / (1920 - 768)));
+        margin-right: calc(216px + (693 - 216)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__logo {
+        width: calc(120px + (146 - 120)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__nav {
+        margin-right: calc(68px + (305 - 68)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__title {
+        font-size: calc(14px + (20 - 14)*((100vw - 768px) / (1920 - 768)));
+        margin-bottom: calc(30px + (40 - 30)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__nav-link {
+        font-size: calc(12px + (16 - 12)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__number {
+        a {
+            font-size: calc(12px + (16 - 12)*((100vw - 768px) / (1920 - 768)));
+            color: @accentColor;
+        }
+    }
+    .footer__number {
+        a::before{
+            width: calc(11px + (15 - 11)*((100vw - 768px) / (1920 - 768)));
+            height: calc(12px + (16 - 12)*((100vw - 768px) / (1920 - 768)));
+        }
+    }
+    .footer__links {
+        .mail {
+            width: calc(20px + (25 - 20)*((100vw - 768px) / (1920 - 768)));
+            height: calc(20px + (25 - 20)*((100vw - 768px) / (1920 - 768)));
+        }
+        .vk {
+            width: calc(20px + (25 - 20)*((100vw - 768px) / (1920 - 768)));
+            height: calc(20px + (25 - 20)*((100vw - 768px) / (1920 - 768)));
+        }
+    }
+    .footer__developer {
+        a {
+            width: calc(10px + (11 - 10)*((100vw - 768px) / (1920 - 768)));
+            height: calc(9px + (10 - 9)*((100vw - 768px) / (1920 - 768)));
+        }
+    }
+    .footer__links {
+        font-size: calc(10px + (14 - 10)*((100vw - 768px) / (1920 - 768)));
+        margin-bottom: calc(25px + (40 - 25)*((100vw - 768px) / (1920 - 768)));
+    }
+    .footer__developer-text {
+        font-size: calc(10px + (14 - 10)*((100vw - 768px) / (1920 - 768)));
     }
 }
 
