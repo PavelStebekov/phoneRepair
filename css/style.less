@@ -199,14 +199,22 @@ body {
 // sale--------------------
 
 .sale {
-    // height: 600px;
-    background: url(../img/sale.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
     position: relative;
+    &:before {
+        content: '';
+        background-image: url('../img/sale.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
 }
+
 
 // status ---------------------
 
