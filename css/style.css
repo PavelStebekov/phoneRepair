@@ -26,6 +26,9 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+.map * {
+  touch-action: auto;
+}
 .hero__image {
   overflow: hidden;
   flex: 0 0 62%;
