@@ -1657,11 +1657,14 @@ h6 {
     top: 31vh;
     left: 20px;
     margin: 0;
-    z-index: 1;
+    z-index: 7;
     max-width: calc(275px + (329 - 275)*((100vw - 320px) / (768 - 320)));
   }
   .hero__btn {
     width: 100%;
+  }
+  .hero__btn .btn--no-bg {
+    border: 2px solid #109D9A;
   }
   .service {
     height: calc(568px + (625 - 568)*((100vw - 320px) / (768 - 320)));
@@ -1931,7 +1934,7 @@ h6 {
     width: calc(29px + (40 - 29)*((100vw - 320px) / (768 - 320)));
     height: calc(29px + (40 - 29)*((100vw - 320px) / (768 - 320)));
     background-size: calc(10px + (14 - 10)*((100vw - 320px) / (768 - 320))) calc(9px + (12 - 9)*((100vw - 320px) / (768 - 320)));
-    border: 2px solid #109D9A;
+    border: 1px solid #109D9A;
   }
   .status__info {
     flex-direction: column;

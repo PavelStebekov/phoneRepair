@@ -1051,11 +1051,14 @@ a, label{
         top: 31vh;
         left: 20px;
         margin: 0;
-        z-index: 1;
+        z-index: 7;
         max-width: calc(275px + (329 - 275)*((100vw - 320px) / (768 - 320)));
     }
     .hero__btn {
         width: 100%;
+        .btn--no-bg {
+            border: 2px solid @accentColor;
+        }
     }
 
     // service
@@ -1346,7 +1349,7 @@ a, label{
         width: calc(29px + (40 - 29)*((100vw - 320px) / (768 - 320)));
         height: calc(29px + (40 - 29)*((100vw - 320px) / (768 - 320)));
         background-size: calc(10px + (14 - 10)*((100vw - 320px) / (768 - 320))) calc(9px + (12 - 9)*((100vw - 320px) / (768 - 320)));
-        border: 2px solid @accentColor;
+        border: 1px solid @accentColor;
     }
     .status__info {
         flex-direction: column;
