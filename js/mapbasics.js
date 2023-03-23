@@ -1,9 +1,7 @@
 ymaps.ready(init);
-
 let myMap;
 
 function init () {
-    
     destinations = {
         'Наш офис в городе Катайске': [56.285863, 62.581512],
         'Наш офис в городе Далматово': [56.260613, 62.935654],
@@ -41,45 +39,36 @@ function init () {
     myMap.geoObjects.add(placemark);
     myMap.geoObjects.add(placemark2);
     
-
     let windowInnerWidth = window.innerWidth;
     if (windowInnerWidth < '768') {
         myMap.behaviors.disable('drag');
     };
     
-
     function clickGoto() {
         let pos = this.textContent;
+        
         const parentColAll = document.querySelectorAll('.contacts__item');
         let parentCol = this.closest('.contacts__item');
         let windowInnerWidth = window.innerWidth;
-
-        console.log(pos);
-        console.log(windowInnerWidth);
-        console.log(pos === 'Наш офис в городе Катайске' && windowInnerWidth < '1600');
         
         for (let k = 0; k < col.length; k++) {
             col[k].classList.remove('active');
         }
 
         if (windowInnerWidth < '768') {
-            for (let k = 0; k < col.length; k++) {
-                gsap.to (parentColAll[k], {
+            for (let i = 0; i < col.length; i++) {
+                gsap.to (parentColAll[i], {
                     duration: 0.8,
                     height: 20,
                 });
             }
-        }
-
-        this.classList.add('active');
-
-        if (windowInnerWidth < '768') {
             gsap.to (parentCol, {
                 duration: 0.8,
                 height: parentCol.scrollHeight,
             });
         }
 
+        this.classList.add('active');
         
         if (pos === 'Наш офис в городе Катайске' && windowInnerWidth < '1600') { 
             if (windowInnerWidth < '480') {

@@ -33,118 +33,6 @@ a,
 label {
   -webkit-tap-highlight-color: transparent;
 }
-.loader__bg {
-  position: fixed;
-  background-color: #000000;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cssload-piano {
-  margin: auto;
-  width: 79px;
-  height: 20px;
-  font-size: 10px;
-  transform: rotate(270deg);
-}
-.cssload-piano > div {
-  height: 100%;
-  width: 100%;
-  display: block;
-  margin-bottom: 0.6em;
-  animation: stretchdelay 1.38s infinite ease-in-out;
-  -o-animation: stretchdelay 1.38s infinite ease-in-out;
-  -ms-animation: stretchdelay 1.38s infinite ease-in-out;
-  -webkit-animation: stretchdelay 1.38s infinite ease-in-out;
-  -moz-animation: stretchdelay 1.38s infinite ease-in-out;
-}
-.cssload-piano .cssload-rect2 {
-  animation-delay: -1.15s;
-  -o-animation-delay: -1.15s;
-  -ms-animation-delay: -1.15s;
-  -webkit-animation-delay: -1.15s;
-  -moz-animation-delay: -1.15s;
-}
-.cssload-piano .cssload-rect3 {
-  animation-delay: -0.92s;
-  -o-animation-delay: -0.92s;
-  -ms-animation-delay: -0.92s;
-  -webkit-animation-delay: -0.92s;
-  -moz-animation-delay: -0.92s;
-}
-@-o-keyframes stretchdelay {
-  0%,
-  40%,
-  100% {
-    -o-transform: scaleX(0.8);
-    background-color: #2e5865;
-    box-shadow: 0 0 0 rgba(10, 10, 10, 0.1);
-  }
-  20% {
-    -o-transform: scaleX(1);
-    background-color: #00b192;
-    box-shadow: 0 5px 6px rgba(10, 10, 10, 0.4);
-  }
-}
-@-ms-keyframes stretchdelay {
-  0%,
-  40%,
-  100% {
-    -ms-transform: scaleX(0.8);
-    background-color: #2e5865;
-    box-shadow: 0 0 0 rgba(10, 10, 10, 0.1);
-  }
-  20% {
-    -ms-transform: scaleX(1);
-    background-color: #00b192;
-    box-shadow: 0 5px 6px rgba(10, 10, 10, 0.4);
-  }
-}
-@-webkit-keyframes stretchdelay {
-  0%,
-  40%,
-  100% {
-    -webkit-transform: scaleX(0.8);
-    background-color: #2e5865;
-    box-shadow: 0 0 0 rgba(10, 10, 10, 0.1);
-  }
-  20% {
-    -webkit-transform: scaleX(1);
-    background-color: #00b192;
-    box-shadow: 0 5px 6px rgba(10, 10, 10, 0.4);
-  }
-}
-@-moz-keyframes stretchdelay {
-  0%,
-  40%,
-  100% {
-    -moz-transform: scaleX(0.8);
-    background-color: #2e5865;
-    box-shadow: 0 0 0 rgba(10, 10, 10, 0.1);
-  }
-  20% {
-    -moz-transform: scaleX(1);
-    background-color: #00b192;
-    box-shadow: 0 5px 6px rgba(10, 10, 10, 0.4);
-  }
-}
-@keyframes stretchdelay {
-  0%,
-  40%,
-  100% {
-    transform: scaleX(0.8);
-    background-color: #2e5865;
-    box-shadow: 0 0 0 rgba(10, 10, 10, 0.1);
-  }
-  20% {
-    transform: scaleX(1);
-    background-color: #00b192;
-    box-shadow: 0 5px 6px rgba(10, 10, 10, 0.4);
-  }
-}
 .hero__image {
   overflow: hidden;
   flex: 0 0 62%;
@@ -498,7 +386,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 7;
   padding: 0 40px;
 }
 .header__logo {
@@ -1582,21 +1470,16 @@ h6 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 300;
-    transition: all 0.4s ease;
     overflow: auto;
-    visibility: hidden;
     opacity: 0;
-  }
-  .menu-active {
-    visibility: visible;
   }
   .menu .menu-list {
     width: calc(320px + (768 - 320)*((100vw - 320px) / (768 - 320)));
     position: relative;
-    top: -100%;
+    transform: translateY(-100%);
     height: calc(278px + (329 - 278)*((100vw - 320px) / (768 - 320)));
     background-color: #000000;
     align-items: center;
@@ -1657,7 +1540,7 @@ h6 {
     top: 31vh;
     left: 20px;
     margin: 0;
-    z-index: 7;
+    z-index: 2;
     max-width: calc(275px + (329 - 275)*((100vw - 320px) / (768 - 320)));
   }
   .hero__btn {
@@ -1681,7 +1564,7 @@ h6 {
   .main-wrapper {
     display: block;
     overflow: visible;
-    height: 225px;
+    height: calc(225px + (302 - 225)*((100vw - 320px) / (768 - 320)));
     width: 100%;
     gap: 0px;
   }
@@ -1692,7 +1575,7 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: calc(80px + (100 - 80)*((100vw - 320px) / (768 - 320)));
   }
   .main-content-wrapper {
     position: static;
@@ -1703,23 +1586,20 @@ h6 {
   .main-content .service__title {
     font-size: calc(16px + (20 - 16)*((100vw - 320px) / (768 - 320)));
   }
-  .slider {
-    height: 225px;
-    width: 100%;
-    overflow: visible;
-  }
   .slider2 {
     display: none;
-    transform: rotate(0deg);
   }
   .slider3 {
+    height: calc(225px + (302 - 225)*((100vw - 320px) / (768 - 320)));
+    width: 100%;
     display: block;
     position: relative;
     overflow: visible;
   }
   .slider3__item {
-    height: 225px !important;
-    padding: 10px;
+    height: calc(225px + (302 - 225)*((100vw - 320px) / (768 - 320))) !important;
+    width: calc(158px + (241 - 158)*((100vw - 320px) / (768 - 320))) !important;
+    padding: calc(7px + (10 - 7)*((100vw - 320px) / (768 - 320)));
     border-radius: 15px;
     background-color: #fff;
     display: flex;
@@ -1734,23 +1614,23 @@ h6 {
     align-items: center;
     justify-content: center;
     padding: 5px;
-    width: 55px;
-    height: 55px;
+    width: 80px;
+    height: calc(50px + (60 - 50)*((100vw - 320px) / (768 - 320)));
   }
   .slide__title {
-    font-size: 12px;
-    margin: 20px 0px 10px;
+    font-size: calc(12px + (16 - 12)*((100vw - 320px) / (768 - 320)));
+    margin: calc(20px + (30 - 20)*((100vw - 320px) / (768 - 320))) 0px calc(10px + (15 - 10)*((100vw - 320px) / (768 - 320)));
   }
   .slide__text {
-    font-size: 10px;
+    font-size: calc(10px + (14 - 10)*((100vw - 320px) / (768 - 320)));
   }
   .button-prev {
     position: absolute;
     z-index: 8;
-    top: -55px;
-    left: 125px;
-    width: 30px;
-    height: 30px;
+    top: calc(-55px + (-70 + 55)*((100vw - 320px) / (768 - 320)));
+    left: calc(125px + (334 - 125)*((100vw - 320px) / (768 - 320)));
+    width: calc(30px + (40 - 30)*((100vw - 320px) / (768 - 320)));
+    height: calc(30px + (40 - 30)*((100vw - 320px) / (768 - 320)));
     background: url('../img/arrowSlider.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -1759,10 +1639,10 @@ h6 {
   .button-next {
     position: absolute;
     z-index: 8;
-    top: -55px;
-    right: 125px;
-    width: 30px;
-    height: 30px;
+    top: calc(-55px + (-70 + 55)*((100vw - 320px) / (768 - 320)));
+    right: calc(125px + (334 - 125)*((100vw - 320px) / (768 - 320)));
+    width: calc(30px + (40 - 30)*((100vw - 320px) / (768 - 320)));
+    height: calc(30px + (40 - 30)*((100vw - 320px) / (768 - 320)));
     background: url('../img/arrowSlider.svg');
     background-repeat: no-repeat;
     background-size: contain;
