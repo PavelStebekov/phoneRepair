@@ -7,7 +7,10 @@ function init () {
     destinations = {
         'Наш офис в городе Катайске': [56.285863, 62.581512],
         'Наш офис в городе Далматово': [56.260613, 62.935654],
-        'newcenter': [56.285993, 62.580065]
+        'newcenter': [56.285993, 62.580065],
+        'newcenter2': [56.286872, 62.579652],
+        'newcenterD2': [56.260873, 62.934199],
+        'newcenterD3': [56.261426, 62.932910],
     },
 
     myMap = new ymaps.Map('map', {
@@ -79,15 +82,35 @@ function init () {
 
         
         if (pos === 'Наш офис в городе Катайске' && windowInnerWidth < '1600') { 
-            myMap.panTo(destinations['newcenter'], {
-                flying: true,
-                duration: 3000,
-            });
+            if (windowInnerWidth < '480') {
+                myMap.panTo(destinations['newcenter2'], {
+                    flying: true,
+                    duration: 3000,
+                });
+            } else {
+                myMap.panTo(destinations['newcenter'], {
+                    flying: true,
+                    duration: 3000,
+                });
+            }
+    
         } else {
-            myMap.panTo(destinations[pos], {
-                flying: true,
-                duration: 3000,
-            });
+            if (windowInnerWidth < '480') {
+                myMap.panTo(destinations['newcenterD3'], {
+                    flying: true,
+                    duration: 3000,
+                });
+            } else if (windowInnerWidth < '680'){
+                myMap.panTo(destinations['newcenterD2'], {
+                    flying: true,
+                    duration: 3000,
+                });
+            } else {
+                myMap.panTo(destinations[pos], {
+                    flying: true,
+                    duration: 3000,
+                });
+            }
         }
         return false;
     }
@@ -99,8 +122,10 @@ function init () {
     
     function onResizeMap() {
         const windowInnerWidth = window.innerWidth;
-
-        if (windowInnerWidth < '1600') { 
+        
+        if (windowInnerWidth < '480') {
+            myMap.setCenter(destinations['newcenter2'], 17);
+        } else if (windowInnerWidth < '1600') { 
             //Set New center
             myMap.setCenter(destinations['newcenter'], 17);
         } 

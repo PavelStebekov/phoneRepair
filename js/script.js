@@ -1,7 +1,6 @@
 window.onload = function () {
   let preloader = document.querySelector('.loader__bg');
   
-
   preloader.style.display = 'none';
 
   gsap.registerPlugin(ScrollTrigger);
@@ -140,26 +139,26 @@ window.onload = function () {
   slider2.controller.control = slider1;
 
   // hero animation
-  gsap.to(".contain", {
-    yPercent: -20,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    }, 
-  });
-  gsap.to(".hero__image", {
-    yPercent: 10,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    }, 
-  });
+  // gsap.to(".contain", {
+  //   yPercent: -20,
+  //   ease: "none",
+  //   scrollTrigger: {
+  //     trigger: ".hero",
+  //     start: "top top",
+  //     end: "bottom top",
+  //     scrub: true,
+  //   }, 
+  // });
+  // gsap.to(".hero__image", {
+  //   yPercent: 10,
+  //   ease: "none",
+  //   scrollTrigger: {
+  //     trigger: ".hero",
+  //     start: "top top",
+  //     end: "bottom top",
+  //     scrub: true,
+  //   }, 
+  // });
 
   const tl = gsap.timeline();
   tl.from ("body", {duration: 0, opacity: 0});
@@ -169,23 +168,23 @@ window.onload = function () {
   tl.from (".hero__btn", {duration: 0.8, opacity: 0});
 
   // service animation
-  const tl2 = gsap.timeline({scrollTrigger:{
-    trigger: '.service',
-    start:"top 50%",
-    end:"bottom top",
-  }})
-  .from (".main-content", {duration: 0.8, y: 200, opacity: 0});
+  // const tl2 = gsap.timeline({scrollTrigger:{
+  //   trigger: '.service',
+  //   start:"top 50%",
+  //   end:"bottom top",
+  // }})
+  // .from (".main-content", {duration: 0.8, y: 200, opacity: 0});
 
-  gsap.to(".main-wrapper", {
-    yPercent: 20,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".service",
-      start: "top 50%",
-      end: "bottom top",
-      scrub: true,
-    }, 
-  });
+  // gsap.to(".main-wrapper", {
+  //   yPercent: 20,
+  //   ease: "none",
+  //   scrollTrigger: {
+  //     trigger: ".service",
+  //     start: "top 50%",
+  //     end: "bottom top",
+  //     scrub: true,
+  //   }, 
+  // });
 
   ScrollTrigger.create({
     trigger: '.service',
@@ -195,117 +194,117 @@ window.onload = function () {
   });
 
   // price animation
-  const tl3 = gsap.timeline({scrollTrigger:{
-    trigger: '.price',
-    start:"top 70%",
-    end:"bottom top",
-  }})
-  .from (".price__title", {duration: 0.8, y: 100, opacity: 0});
+  // const tl3 = gsap.timeline({scrollTrigger:{
+  //   trigger: '.price',
+  //   start:"top 70%",
+  //   end:"bottom top",
+  // }})
+  // .from (".price__title", {duration: 0.8, y: 100, opacity: 0});
 
-  gsap.from(".accordion", {
-    duration: 0.8,
-    y: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".price",
-      start: "top 60%",
-      end: "bottom top",
-    }, 
-  });
-  gsap.from(".price__text", {
-    duration: 0.8,
-    y: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".price",
-      start: "top 30%",
-      end: "bottom top",
-    }, 
-  });
-  gsap.from(".price__btn", {
-    duration: 0.8,
-    y: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".price",
-      start: "top 25%",
-      end: "bottom top",
-    }, 
-  });
+  // gsap.from(".accordion", {
+  //   duration: 0.8,
+  //   y: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ".price",
+  //     start: "top 60%",
+  //     end: "bottom top",
+  //   }, 
+  // });
+  // gsap.from(".price__text", {
+  //   duration: 0.8,
+  //   y: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ".price",
+  //     start: "top 30%",
+  //     end: "bottom top",
+  //   }, 
+  // });
+  // gsap.from(".price__btn", {
+  //   duration: 0.8,
+  //   y: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ".price",
+  //     start: "top 25%",
+  //     end: "bottom top",
+  //   }, 
+  // });
 
   // reviews animation
-  gsap.from(".reviews__title", {
-    duration: 0.8,
-    y: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: '.reviews',
-      start:"top 80%",
-      end:"bottom top",
-    }, 
-  });
-  gsap.from(".reviews__item1", {
-    duration: 0.8,
-    x: -100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: '.reviews',
-      start:"top 60%",
-      end:"bottom top",
-    }, 
-  });
-  gsap.from(".reviews__item2", {
-    duration: 0.8,
-    x: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: '.reviews',
-      start:"top 45%",
-      end:"bottom top",
-    }, 
-  });
-  gsap.from(".reviews__item3", {
-    duration: 0.8,
-    x: -100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: '.reviews',
-      start:"top 25%",
-      end:"bottom top",
-    }, 
-  });
-  gsap.from(".reviews__item4", {
-    duration: 0.8,
-    x: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: '.reviews',
-      start:"top 5%",
-      end:"bottom top",
-    }, 
-  });
+  // gsap.from(".reviews__title", {
+  //   duration: 0.8,
+  //   y: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: '.reviews',
+  //     start:"top 80%",
+  //     end:"bottom top",
+  //   }, 
+  // });
+  // gsap.from(".reviews__item1", {
+  //   duration: 0.8,
+  //   x: -100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: '.reviews',
+  //     start:"top 60%",
+  //     end:"bottom top",
+  //   }, 
+  // });
+  // gsap.from(".reviews__item2", {
+  //   duration: 0.8,
+  //   x: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: '.reviews',
+  //     start:"top 45%",
+  //     end:"bottom top",
+  //   }, 
+  // });
+  // gsap.from(".reviews__item3", {
+  //   duration: 0.8,
+  //   x: -100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: '.reviews',
+  //     start:"top 25%",
+  //     end:"bottom top",
+  //   }, 
+  // });
+  // gsap.from(".reviews__item4", {
+  //   duration: 0.8,
+  //   x: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: '.reviews',
+  //     start:"top 5%",
+  //     end:"bottom top",
+  //   }, 
+  // });
 
 
   // status animation
-  gsap.from (".status__bg", {
-    duration: 0.8,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".status",
-      start: "top 60%",
-      end: "bottom top",
-    }, 
-  })
-  gsap.from (".status__content", {
-    duration: 0.5,
-    y: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".status",
-      start: "top 20%",
-      end: "bottom top",
-    }, 
-  })
+  // gsap.from (".status__bg", {
+  //   duration: 0.8,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ".status",
+  //     start: "top 60%",
+  //     end: "bottom top",
+  //   }, 
+  // });
+  // gsap.from (".status__content", {
+  //   duration: 0.5,
+  //   y: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ".status",
+  //     start: "top 20%",
+  //     end: "bottom top",
+  //   }, 
+  // });
 
   const statusBlock = document.querySelector('.status');
   const statusInfo = document.querySelector('.status__info');
@@ -324,26 +323,26 @@ window.onload = function () {
   });
 
   // contacts animation
-  gsap.from (".contacts__content", {
-    duration: 0.5,
-    x: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".contacts",
-      start: "top 40%",
-      end: "bottom top",
-    }, 
-  })
-  gsap.from (".contacts__links", {
-    duration: 0.5,
-    x: 100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".contacts",
-      start: "top 20%",
-      end: "bottom top",
-    }, 
-  })
+  // gsap.from (".contacts__content", {
+  //   duration: 0.5,
+  //   x: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ".contacts",
+  //     start: "top 40%",
+  //     end: "bottom top",
+  //   }, 
+  // });
+  // gsap.from (".contacts__links", {
+  //   duration: 0.5,
+  //   x: 100,
+  //   opacity: 0,
+  //   scrollTrigger: {
+  //     trigger: ".contacts",
+  //     start: "top 20%",
+  //     end: "bottom top",
+  //   }, 
+  // });
 
 
   // burger
@@ -388,4 +387,23 @@ window.onload = function () {
       });
     });
   }
+
+  const anchors = document.querySelectorAll('a[href*="#"]');
+  for (let anchor of anchors){
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      const blockId = anchor.getAttribute('href');
+      console.log(blockId);
+      document.querySelector('' + blockId).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+
+  let mm = gsap.matchMedia();
+
+  mm.add('(max-width: 768px)', function(){
+
+  });
 }
